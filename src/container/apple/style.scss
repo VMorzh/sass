@@ -72,7 +72,7 @@
     }
 }
 .product-small {
-    max-height: 580px; 
+    max-height: 582px; 
     height: 100vh;
     background-size: cover;
     
@@ -80,7 +80,22 @@
         background-size: 150%;
         max-height: 500px; 
     }
+    
 }
+.product--text-small {
+    .product__title {
+        font-size: 40px;
+    }
+    .product__descriptions {
+        font-size: 20px;
+    }
+    
+    // @media all and ( width < s.screen("laptop")) {
+    //     .product__title .product__descriptions {
+    //        text-align: end;
+    //     }       
+    // } 
+} 
 
    .product--dark {
     .product__title, .product__descriptions {
@@ -94,11 +109,12 @@
    }
    }
 
-   .product--button {
+   .product--bottom {
     .product__content {
      align-content: flex-end;
     }
     }
+
    .product--light {
     .product__title, .product__descriptions {
         color: s.color('fontDark');
@@ -109,6 +125,11 @@
     'iphone-pro' '/img/iphone_pro.png' #000 ,
     'iphone' '/img/iphone.png' #fafafa,
     'trade-in' '/img/trade_in.png' #FBFBFD,
+    'conference' '/img/conference.png' #000,
+    'ipad' '/img/ipad.png' #FBFBFD,
+    'business' '/img/business.png' #000,
+    'gift' '/img/gift.png' #FBFBFD,
+    'card' '/img/card.png' #FBFBFD,
    );
 @each $class, $url, $color in $productImage {
     .product--#{$class} {
